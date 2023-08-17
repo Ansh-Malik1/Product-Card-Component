@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --darkBlue: hsl(212, 21%, 14%);
+    --grayishBlue:hsl(228, 12%, 48%);
+    --darkCyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+
+}
+body{
+    font-family: 'Fraunces', serif;
+}
+#wrapper{
+    padding: 0rem;
+    background-color: rgb(219, 196, 196);
+    height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    height: 70vh;
+    padding-bottom: 2rem;
+    margin: auto;
+}
+.details{
+    background-color: var(--cream);
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 2rem
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1rem;
+    margin-top:1rem;
+    padding:1rem;
+
+}
+
+.info>h4,.info>p{
+    opacity: 85%;
+    font-weight: lighter;
+}
+
+.info>h1{
+    font-weight: bolder;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap:1rem
+}
+
+.price>p{
+    text-decoration: line-through;
+}
+
+.price>h1{
+    font-weight: bolder;
+    color:var(--darkCyan)
+}
+picture>img{
+    border-radius:10px;
+    width:100%
+}
+
+.button{
+    width:90%;
+    margin:auto;
+    background-color: var(--darkCyan);
+    display: flex;
+    padding: 1rem;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    gap:0.8rem;
+    cursor: pointer;
+}
+
+.button>a{
+    margin-left: 2rem;
+    color: white;
+}
+
+
+@media screen and (min-width: 700px) {
+    .details{
+        display: flex;
+        flex-direction:row;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        width:60%;
+        margin:auto
+    }
+    .button{
+        width:70%;
+        justify-content: center;
+        align-items: center;
+    }
+    .button:hover{
+        background-color:hsl(158, 58%, 14%) ;
+    }
+    picture{
+        height:25em;
+        width:40%;
+        
+    }
+    img{
+        height: 100%;
+    }
+    .info{
+        width:60%
+    }
+}
